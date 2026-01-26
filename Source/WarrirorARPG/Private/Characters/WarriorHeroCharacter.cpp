@@ -83,6 +83,12 @@ void AWarriorHeroCharacter::Input_Move(const FInputActionValue& ActionValue)
 
 void AWarriorHeroCharacter::Input_Look(const FInputActionValue& ActionValue)
 {
+	const FVector2D LookAxisVector = ActionValue.Get<FVector2D>();
+
+	if (LookAxisVector.X != 0)
+		AddControllerYawInput(LookAxisVector.X);
+	if (LookAxisVector.Y != 0)
+		AddControllerPitchInput(LookAxisVector.Y);
 
 
 }

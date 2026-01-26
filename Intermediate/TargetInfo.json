@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "WarrirorARPG",
+			"Path": "..\\Source\\WarrirorARPG.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "WarrirorARPGEditor",
+			"Path": "..\\Source\\WarrirorARPGEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

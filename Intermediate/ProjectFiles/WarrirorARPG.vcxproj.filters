@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\WarrirorARPG.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\WarrirorARPG.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\WarrirorARPGEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\LICENSE.txt" />
+    <None Include="..\..\README.md" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\WarrirorARPG">
+      <UniqueIdentifier>{09E993A0-C1AE-341F-803E-C73D59AC773D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\WarrirorARPG\WarrirorARPG.Build.cs">
+      <Filter>Source\WarrirorARPG</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\WarrirorARPG\WarrirorARPG.cpp">
+      <Filter>Source\WarrirorARPG</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WarrirorARPG\WarrirorARPG.h">
+      <Filter>Source\WarrirorARPG</Filter>
+    </ClInclude>
+    <Filter Include="Source\WarrirorARPG\Private">
+      <UniqueIdentifier>{505F7021-1F70-3684-8D6E-2B4935BC70DA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\WarrirorARPG\Private\WarriorGameplayTags.cpp">
+      <Filter>Source\WarrirorARPG\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\WarrirorARPG\Private\Characters">
+      <UniqueIdentifier>{45D0F4F0-9640-3737-91A3-45B84245C85A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\WarrirorARPG\Private\Characters\WarriorBaseCharacter.cpp">
+      <Filter>Source\WarrirorARPG\Private\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\WarrirorARPG\Private\Characters\WarriorHeroCharacter.cpp">
+      <Filter>Source\WarrirorARPG\Private\Characters</Filter>
+    </ClCompile>
+    <Filter Include="Source\WarrirorARPG\Private\Components">
+      <UniqueIdentifier>{DFD56B9F-9D91-3AE8-87B7-3F117F268D22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\WarrirorARPG\Private\Components\Inputs">
+      <UniqueIdentifier>{14A07B63-9641-3DA3-90AC-DA8909139924}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\WarrirorARPG\Private\Components\Inputs\WarriorInputComponent.cpp">
+      <Filter>Source\WarrirorARPG\Private\Components\Inputs</Filter>
+    </ClCompile>
+    <Filter Include="Source\WarrirorARPG\Private\Controllers">
+      <UniqueIdentifier>{BAA9EF34-04E8-34C7-B4A3-5BD479767B18}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\WarrirorARPG\Private\Controllers\WarriorHeroController.cpp">
+      <Filter>Source\WarrirorARPG\Private\Controllers</Filter>
+    </ClCompile>
+    <Filter Include="Source\WarrirorARPG\Private\DataAsset">
+      <UniqueIdentifier>{FEBBAF69-1424-3935-884C-7A4DEC0E4E7E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\WarrirorARPG\Private\DataAsset\Inputs">
+      <UniqueIdentifier>{E8DBF802-A107-3C09-B741-05392567E08B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\WarrirorARPG\Private\DataAsset\Inputs\DataAsset_Inputconfig.cpp">
+      <Filter>Source\WarrirorARPG\Private\DataAsset\Inputs</Filter>
+    </ClCompile>
+    <Filter Include="Source\WarrirorARPG\Private\GameModes">
+      <UniqueIdentifier>{85BD5697-2F8B-384E-9D8F-3EBE9E81136B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\WarrirorARPG\Private\GameModes\WarriorBaseGameMode.cpp">
+      <Filter>Source\WarrirorARPG\Private\GameModes</Filter>
+    </ClCompile>
+    <Filter Include="Source\WarrirorARPG\Public">
+      <UniqueIdentifier>{9F50DCE5-B3EC-3DEC-B2EF-995420EB47C1}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\WarrirorARPG\Public\WarriordebugHelper.h">
+      <Filter>Source\WarrirorARPG\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\WarrirorARPG\Public\WarriorGameplayTags.h">
+      <Filter>Source\WarrirorARPG\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\WarrirorARPG\Public\Characters">
+      <UniqueIdentifier>{96E37C7B-31D7-36A6-A6D1-3C3F5BEE74FE}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\WarrirorARPG\Public\Characters\WarriorBaseCharacter.h">
+      <Filter>Source\WarrirorARPG\Public\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\WarrirorARPG\Public\Characters\WarriorHeroCharacter.h">
+      <Filter>Source\WarrirorARPG\Public\Characters</Filter>
+    </ClInclude>
+    <Filter Include="Source\WarrirorARPG\Public\Components">
+      <UniqueIdentifier>{81E29EE3-2D92-356D-833D-54C417657899}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\WarrirorARPG\Public\Components\Inputs">
+      <UniqueIdentifier>{681BFA41-007A-3891-9259-30E9E039DCC7}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\WarrirorARPG\Public\Components\Inputs\WarriorInputComponent.h">
+      <Filter>Source\WarrirorARPG\Public\Components\Inputs</Filter>
+    </ClInclude>
+    <Filter Include="Source\WarrirorARPG\Public\Controllers">
+      <UniqueIdentifier>{C674366C-B221-32D7-9705-EAC4211927D8}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\WarrirorARPG\Public\Controllers\WarriorHeroController.h">
+      <Filter>Source\WarrirorARPG\Public\Controllers</Filter>
+    </ClInclude>
+    <Filter Include="Source\WarrirorARPG\Public\DataAsset">
+      <UniqueIdentifier>{651A1A5D-B8FC-364C-930A-51BCC87C6AB7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\WarrirorARPG\Public\DataAsset\Inputs">
+      <UniqueIdentifier>{02D18405-DC85-3A55-B792-5B6B392AFDD1}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\WarrirorARPG\Public\DataAsset\Inputs\DataAsset_Inputconfig.h">
+      <Filter>Source\WarrirorARPG\Public\DataAsset\Inputs</Filter>
+    </ClInclude>
+    <Filter Include="Source\WarrirorARPG\Public\GameModes">
+      <UniqueIdentifier>{38B56530-D243-3CF1-93E6-32E967D8E12F}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\WarrirorARPG\Public\GameModes\WarriorBaseGameMode.h">
+      <Filter>Source\WarrirorARPG\Public\GameModes</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

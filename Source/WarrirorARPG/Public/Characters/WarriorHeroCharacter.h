@@ -9,6 +9,7 @@
 class USpringArmComponent;
 class UCameraComponent;
 class UDataAsset_InputConfig;
+struct FInputActionValue;
 /**
  * 
  */
@@ -34,10 +35,12 @@ private:
 	class UCameraComponent* FollowCamera;
 
 
-#pragma region Herodata
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
-	UDataAsset_InputConfig* Iputconfig;
+#pragma region Inputs
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
+	UDataAsset_InputConfig* InputconfigDataAsset;
 
+	void Input_Move(const FInputActionValue& ActionValue);
+	void Input_Look(const FInputActionValue& ActionValue);
 #pragma endregion
 
 	

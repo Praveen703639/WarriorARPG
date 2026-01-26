@@ -1,0 +1,15 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"D:/string_edit_1/WarrirorARPG/Content/PlayerCharacter/BP_WarriorHeroCharacter.uasset",
+				"D:/string_edit_1/WarrirorARPG/Content/ThirdPerson/Input/IMC_Default.uasset",
+				"D:/string_edit_1/WarrirorARPG/Content/PlayerCharacter/BP_HeroController.uasset",
+				"D:/string_edit_1/WarrirorARPG/Content/Gamemodes/BP_WarriorBaseGameMode.uasset"
+			]
+		}
+	]
+}

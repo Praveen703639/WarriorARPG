@@ -3,6 +3,8 @@
 
 #include "AnimInstances/Hero/WarriorHeroAnimInstance.h"
 #include "Characters/WarriorBaseCharacter.h"
+#include "GameFramework/CharacterMovementComponent.h"
+
 
 
 void UWarriorHeroAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
@@ -12,10 +14,17 @@ void UWarriorHeroAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	{
 		return;
 	}
-	WarriorMovementComponent = OwingCharacter->GetCharacterMovement();
+	OwingMovementComponent = OwingCharacter->GetCharacterMovement();
 
 }
 
 void UWarriorHeroAnimInstance::NativeThreadSafeUpdateAnimation(float DeltaSeconds)
 {
+	if (!OwingCharacter && !OwingMovementComponent)
+	{
+		return;
+	}
+
+	GroundSpeed = OwingCharacter->GetVelocity().Size2D();
+	bHasAccerleration = OwingMovementComponent->GetCurrentAcceleration().SizeSquared2D()>0.f;
 }

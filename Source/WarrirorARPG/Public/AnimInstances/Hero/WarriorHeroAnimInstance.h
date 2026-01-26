@@ -20,6 +20,13 @@ public:
 protected:
 	UPROPERTY()
 	AWarriorBaseCharacter* OwingCharacter;
+
 	UPROPERTY()
-	UCharacterMovementComponent* WarriorMovementComponent;
+	UCharacterMovementComponent* OwingMovementComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Animdata|Hero")
+	float GroundSpeed;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Animdata|Hero")
+	bool bHasAccerleration;
 };

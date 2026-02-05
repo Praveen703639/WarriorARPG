@@ -5,8 +5,9 @@
 #include "CoreMinimal.h"
 #include "AnimInstances/WarriorCharacterAnimInstance.h"
 #include "WarriorHeroAnimInstance.generated.h"
-class AWarriorBaseCharacter;
-class UCharacterMovementComponent;
+class AWarriorHeroCharacter;
+
+
 /**
  * 
  */
@@ -14,19 +15,21 @@ UCLASS()
 class WARRIRORARPG_API UWarriorHeroAnimInstance : public UWarriorCharacterAnimInstance
 {
 	GENERATED_BODY()
+
 public:
 	virtual void NativeUpdateAnimation(float DeltaSeconds) override;
+
 	virtual void NativeThreadSafeUpdateAnimation(float DeltaSeconds) override;
+
 protected:
-	UPROPERTY()
-	AWarriorBaseCharacter* OwingCharacter;
-
-	UPROPERTY()
-	UCharacterMovementComponent* OwingMovementComponent;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Animdata|References")
+	AWarriorHeroCharacter* OwningHeroCharacter;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Animdata|Hero")
-	float GroundSpeed;
+	bool bShouldEnterRelaxState;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Animdata|Hero")
-	bool bHasAccerleration;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Animdata|Hero")
+	float EnterRelaxStateThreshold= 5.f;
+
+	float IdlleElaspedTime;
 };

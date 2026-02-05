@@ -19,6 +19,9 @@ class WARRIRORARPG_API AWarriorHeroCharacter : public AWarriorBaseCharacter
 	GENERATED_BODY()
 public:
 	AWarriorHeroCharacter();
+	//~ Begin APawn Interface.
+	virtual void PossessedBy(AController* NewController) override;
+	//~ End APawn Interface
 	
 
 protected:

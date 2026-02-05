@@ -6,6 +6,12 @@
 #include "Abilities/GameplayAbility.h"
 #include "WarriorGameplayAbility.generated.h"
 
+UENUM(BlueprintType)
+enum class EWarriorAbilityActivationPolicy : uint8
+{
+	OnGive,
+	OnTrigger
+};
 /**
  * 
  */
@@ -13,5 +19,15 @@ UCLASS()
 class WARRIRORARPG_API UWarriorGameplayAbility : public UGameplayAbility
 {
 	GENERATED_BODY()
+
+
+protected:
+
+	virtual void OnGiveAbility(const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilitySpec& Spec);
+
+	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled);
+
+	UPROPERTY(EditDefaultsOnly, Category = "Ability")
+	EWarriorAbilityActivationPolicy AbilityActivationPolicy = EWarriorAbilityActivationPolicy::OnGive;
 	
 };

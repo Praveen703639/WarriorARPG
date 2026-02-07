@@ -20,11 +20,13 @@ public:
 
 protected:
 	
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "WeaponData")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Weapons")
 	UStaticMeshComponent* WeaponMesh;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "WeaponData")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Weapons")
 	UBoxComponent* WeaponCollisionBox;
+
+	
 
 public:
 	FORCEINLINE UStaticMeshComponent* GetWeaponMesh() const { return WeaponMesh; }

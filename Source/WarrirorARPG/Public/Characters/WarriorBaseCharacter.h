@@ -10,6 +10,7 @@
 
 class UWarriorAbilitySystemComponent;
 class UWarriorAttributeSet;
+class UDataAsset_StartUpDataBase;
 
 
 UCLASS()
@@ -34,6 +35,10 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Gas")
 	UWarriorAttributeSet* WarriorAttributeSet;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "CharacterData")
+	TSoftObjectPtr<UDataAsset_StartUpDataBase> CharacterStartupData;
+
 public:
 	FORCEINLINE UWarriorAbilitySystemComponent* GetWarriorAbilitySystemComponent() const { return WarriorAbilitySystemComponent; }
 	FORCEINLINE UWarriorAttributeSet* GetWarriorAttributeSet() const { return WarriorAttributeSet; }

@@ -11,6 +11,8 @@
 #include "Components/Inputs/WarriorInputComponent.h"
 #include "WarriorGameplayTags.h"
 #include "AbilitySystem/WarriorAbilitySystemComponent.h"
+#include "StartUpData/DataAsset_HeroStartUpData.h"
+#include "Components/Combat/HeroComponentComponent.h"
 
 
 #include "WarriordebugHelper.h"
@@ -38,6 +40,7 @@ AWarriorHeroCharacter::AWarriorHeroCharacter()
 	GetCharacterMovement()->MaxWalkSpeed = 400.f;
 	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f;
 
+	HeroComponentComponent = CreateDefaultSubobject<UHeroComponentComponent>(TEXT("HeroComponentComponent"));
 
 
 
@@ -46,11 +49,15 @@ AWarriorHeroCharacter::AWarriorHeroCharacter()
 void AWarriorHeroCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
-	if (WarriorAbilitySystemComponent && WarriorAttributeSet)
-	{
-		const FString ASCText = FString::Printf(TEXT("Avatar actor is : %s,OwnerActor is : %s"),*WarriorAbilitySystemComponent->GetAvatarActor()->GetActorLabel(),*WarriorAbilitySystemComponent->GetOwnerActor()->GetActorLabel());
-		Debug::Print(TEXT("Abilitysystem component is valid ") + ASCText,FColor::Blue);
+	if (!CharacterStartupData.IsNull())
+	{ 
+		if (UDataAsset_StartUpDataBase* LoadedData = CharacterStartupData.LoadSynchronous())
+		{
+			LoadedData->GiveToAbilitySystemComponent(WarriorAbilitySystemComponent);
+		}
 	}
+	
+  
 }
 
 void AWarriorHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
